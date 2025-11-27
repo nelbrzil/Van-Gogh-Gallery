@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Van Gogh | Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+        .navbar-brand,
+        .display-4,
+        h1,
+        h3 {
+            font-family: "Cormorant Garamond", serif;
+        }
+        p,
+        .fnt-btn,
+        h4 {
+            font-family: "Rubik", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 mx-auto py-3 text-light">VAN GOGH GALLERY</span>
+        </div>
+    </nav>
+
+    <div class="container px-5">
+        <div class="row align-items-center mt-5">
+            <div class="col">
+                <div class="display-4">Vincent van Gogh</div>
+                <p>Mar 30, 1853 - Jul 29, 1890</p>
+                <p>
+                    Van Gogh is today one of the most popular of the Post-Impressionist painters,
+                    although he was not widely appreciated during his lifetime. He is now famed for the
+                    great vitality of his works which are characterised by expressive and emotive use
+                    of brilliant colour and energetic application of impastoed paint. The traumas of his
+                    life, documented in his letters, have tended to dominate and distort modern perceptions of his art.
+                </p>
+                <p>
+                    Van Gogh was born in Holland, the son of a pastor; he travelled to London in 1873, and first visited
+                    Paris in 1874. Over the next decade he was employed in various ways, including as a lay preacher. By
+                    1883 he had started painting, and in 1885-6 he attended the academy in Antwerp where he was
+                    impressed by Japanese prints and by the work of Rubens. On his return to Paris in 1886 he met
+                    artists such as Degas, Gauguin and Seurat, and as a result lightened the colours he used.
+                </p>
+                <p>
+                    In 1888 Van Gogh settled in Arles in Provence, where he was visited by Gauguin and painted his now
+                    famous series of 'Sunflowers'. In the following year a nervous breakdown brought him to a sanatorium
+                    at St Remy; it was at this period that he executed 'A Wheatfield, with Cypresses'. In 1890,
+                    suffering from a new bout of depression, he shot himself in the chest and died two days later.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-5 mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="display-4 mb-2">Famous Works</div>
+            </div>
+        </div>
+        <div class="row" id="content">
+        </div>
+    </div>
+
+    <div class="bg-secondary">
+        <div class="container px-5 mt-5">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="display-4 mt-5 text-light">Van Gogh's Art Style</div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-5">
+            <div class="row align-items-center text-light">
+                <div class="col-12 col-md-4 py-4">
+                    <h4>Expressive Use of Color</h4>
+                    <p>Van Gogh was a pioneer in the use of color to convey emotion and meaning in his artwork. He used
+                        vibrant, often unconventional color palettes to represent the moods and feelings he wished to
+                        express. His bold and expressive use of color gave his paintings a distinctive vibrancy and
+                        energy.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 py-4">
+                    <h4>Textured Brushwork</h4>
+                    <p>Van Gogh was a pioneer in the use of brushwork to convey movement and emotion in his artwork. He
+                        applied thick, textured strokes to give his paintings a tactile and dynamic quality. His bold
+                        and
+                        expressive brushwork made ordinary subjects come alive with energy and intensity.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 py-4">
+                    <h4>Emotional Depth</h4>
+                    <p>Van Gogh's art was deeply personal and emotional. He often painted scenes and subjects that
+                        resonated
+                        with his own experiences and emotions, such as his struggles with mental health. This emotional
+                        depth is palpable in his paintings, making them highly relatable and impactful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-5 my-5 text-center">
+        <div class="mt-5">
+            <h1>Visit the Van Gogh Museum</h1>
+            <p>Experience Van Gogh's art in person at the Van Gogh Museum in Amsterdam, Netherlands.</p>
+            <a href="https://www.vangoghmuseum.nl/en" target="_blank" class="btn btn-secondary fnt-btn">Visit Museum Website</a>
+        </div>
+    </div>
+
+    <div class="navbar bg-dark mt-5">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 mx-auto py-3 text-light">VAN GOGH GALLERY</span>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        var content = document.getElementById("content");
+
+        for (var i = 0; i < paintings.length; i++) {
+            content.innerHTML += `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="card shadow my-3" style="height: 500px">
+            <img src="`+ paintings[i].picture + `" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">` + paintings[i].name + `</h3>
+              <p class="card-text">
+                ` + paintings[i].date + `
+              </p>
+                <p class="card-text">
+                ` + paintings[i].desc + `
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
